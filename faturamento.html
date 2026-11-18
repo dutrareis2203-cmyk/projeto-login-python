@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Faturamento | Lanchonete{% endblock %}
+{% block content %}
+<div class="heading"><div><h1>Faturamento</h1><p class="muted">Resumo das vendas registradas na sua conta.</p></div></div>
+<div class="stats">
+  <section class="panel stat"><span>Total de itens vendidos</span><strong>{{ quantidade }}</strong></section>
+  <section class="panel stat"><span>Faturamento registrado</span><strong>R$ {{ '%.2f'|format(total|float) }}</strong></section>
+</div>
+{% endblock %}

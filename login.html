@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Entrar | Lanchonete{% endblock %}
+{% block content %}
+<section class="auth-card">
+  <h1>Lanchonete</h1>
+  <p class="muted">Entre na sua conta</p>
+  <form method="post">
+    <label>E-mail</label>
+    <input type="email" name="email" placeholder="Digite seu e-mail" required>
+    <label>Senha</label>
+    <input type="password" name="senha" placeholder="Digite sua senha" required>
+    <button class="primary full">Entrar</button>
+  </form>
+  <a class="link" href="{{ url_for('recuperar_senha') }}">Esqueci minha senha</a>
+</section>
+{% endblock %}
